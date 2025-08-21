@@ -20,15 +20,18 @@
 
     <script>
       function rainOrNot(yourChoice) {
+        // Create random number and assign it as computer's choice
         let choice = Math.random();
         let pick = "";
 
+        // Divide random number and assign to rain and no rain
         if (choice > 0.5) {
           pick = "rain";
         } else {
           pick = "no rain";
         }
 
+        // Compare your choice to computer's choice and print result
         if (yourChoice === pick) {
           console.log(
             `You picked: ${yourChoice}. Computer picked ${pick}. You LOOSE!!!`
