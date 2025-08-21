@@ -5,5 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rain or No Rain</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Guess the RAIN... or not!</h1>
+    <div class="play">
+      <button
+        class="rain"
+        onclick="
+        rainOrNot('rain')"
+      >
+        Rain
+      </button>
+      <button class="no-rain" onclick="rainOrNot('no rain')">No Rain</button>
+    </div>
+
+    <script>
+      function rainOrNot(yourChoice) {
+        let choice = Math.random();
+        let pick = "";
+
+        if (choice > 0.5) {
+          pick = "rain";
+        } else {
+          pick = "no rain";
+        }
+
+        if (yourChoice === pick) {
+          console.log(
+            `You picked: ${yourChoice}. Computer picked ${pick}. You LOOSE!!!`
+          );
+        } else {
+          console.log(
+            `You picked: ${yourChoice}. Computer picked ${pick}. WIN!!!`
+          );
+        }
+      }
+    </script>
+  </body>
 </html>
